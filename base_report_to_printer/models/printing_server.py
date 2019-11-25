@@ -32,7 +32,7 @@ class PrintingServer(models.Model):
         string='Printers List',
         help='List of printers available on this server.')
 
-    @api.multi
+    
     def _open_connection(self, raise_on_error=False):
         self.ensure_one()
         connection = False
@@ -49,11 +49,11 @@ class PrintingServer(models.Model):
 
         return connection
 
-    @api.multi
+    
     def action_update_printers(self):
         return self.update_printers()
 
-    @api.multi
+    
     def update_printers(self, domain=None, raise_on_error=False):
         if domain is None:
             domain = []
@@ -106,7 +106,7 @@ class PrintingServer(models.Model):
             self = self.search([])
         return self.update_jobs()
 
-    @api.multi
+    
     def update_jobs(self, which='all', first_job_id=-1):
         job_obj = self.env['printing.job']
         printer_obj = self.env['printing.printer']

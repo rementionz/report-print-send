@@ -85,12 +85,12 @@ class PrintingJob(models.Model):
          'The id of the job must be unique per server !'),
     ]
 
-    @api.multi
+    
     def action_cancel(self):
         self.ensure_one()
         return self.cancel()
 
-    @api.multi
+    
     def cancel(self, purge_job=False):
         for job in self:
             connection = job.server_id._open_connection()

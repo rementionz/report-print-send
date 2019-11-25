@@ -2,7 +2,7 @@
 <odoo>
 
     <record model="ir.ui.view" id="act_report_xml_view">
-        <field name="name">ir.actions.report.form (in base_report_to_printer)</field>
+        <field name="name">ir.actions.report.form</field>
         <field name="model">ir.actions.report</field>
         <field name="inherit_id" ref="base.act_report_xml_view"/>
         <field name="arch" type="xml">

@@ -9,6 +9,7 @@ import logging
 import requests
 from PIL import Image, ImageOps
 from odoo import api, exceptions, fields, models, _
+from odoo.exceptions import UserError
 from odoo.tools.safe_eval import safe_eval
 
 _logger = logging.getLogger(__name__)

@@ -120,8 +120,8 @@ class PrintingLabelZpl2Component(models.Model):
         help='Check if you want to truncate the barcode.')
     model = fields.Selection(
         selection=[
-            (zpl2.MODEL_ORIGINAL, 'Original'),
-            (zpl2.MODEL_ENHANCED, 'Enhanced'),
+            (str(zpl2.MODEL_ORIGINAL), 'Original'),
+            (str(zpl2.MODEL_ENHANCED), 'Enhanced'),
         ], default=zpl2.MODEL_ENHANCED,
         help='Barcode model, used by some barcode types like QR Code.')
     magnification_factor = fields.Integer(
