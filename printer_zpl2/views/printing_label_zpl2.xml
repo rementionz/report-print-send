@@ -178,7 +178,6 @@
         <field name="name">ZPL II Labels</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">printing.label.zpl2</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="search_view_id" ref="view_printing_label_zpl2_search"/>
         <field name="domain">[]</field>

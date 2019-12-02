@@ -287,7 +287,6 @@ class PrintingLabelZpl2(models.Model):
     def import_zpl2(self):
         self.ensure_one()
         return {
-            'view_type': 'form',
             'view_mode': 'form',
             'res_model': 'wizard.import.zpl2',
             'type': 'ir.actions.act_window',
