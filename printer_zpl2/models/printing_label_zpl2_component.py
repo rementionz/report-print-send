@@ -122,7 +122,7 @@ class PrintingLabelZpl2Component(models.Model):
         selection=[
             (str(zpl2.MODEL_ORIGINAL), 'Original'),
             (str(zpl2.MODEL_ENHANCED), 'Enhanced'),
-        ], default=zpl2.MODEL_ENHANCED,
+        ], default=(str(zpl2.MODEL_ENHANCED)),
         help='Barcode model, used by some barcode types like QR Code.')
     magnification_factor = fields.Integer(
         default=1, help='Magnification Factor, from 1 to 10.')
